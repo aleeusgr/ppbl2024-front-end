@@ -53,6 +53,15 @@
             "goal": "My goal is to learn about Cardano blockchain.",
             "name": "Beamie",
             "organization": "None"
-        }
+        },
+
+        {
+            "date": "2025-04-15",
+            "goal": "Learn Mo and Grow Mo",
+            "name": "Mo",
+            "organization": "Green & Citrine"
+         }
+
+         
     ]
 }
