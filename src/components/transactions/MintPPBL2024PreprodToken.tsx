@@ -66,7 +66,7 @@ export default function MintPPBL2024PreprodToken() {
   const { mutate } = api.ppbl2024TokenMintTx.signAndSubmitTx.useMutation({
     onSuccess: (data) => {
       console.log("Transaction Hash:", data);
-      alert("You successfully minted a PPBL 2024 Token!");
+      alert("You successfully minted a PPBL 2025 Token!");
     },
     onError: (error) => {
       console.error("Error submitting transaction:", error);
@@ -80,7 +80,7 @@ export default function MintPPBL2024PreprodToken() {
         `The token alias ${values.tokenAlias} is already minted. Please try a different one.`,
       );
     } else {
-      const _tn = "ppbl2024-" + values.tokenAlias;
+      const _tn = "ppbl2025-" + values.tokenAlias;
       setContributorTokenName(_tn);
       console.log("minting", _tn);
     }
@@ -92,7 +92,7 @@ export default function MintPPBL2024PreprodToken() {
         address &&
         contributorTokenName &&
         contributorTokenName.length >= 11 &&
-        contributorTokenName.startsWith("ppbl2024-") &&
+        contributorTokenName.startsWith("ppbl2025-") &&
         forgingScript
       ) {
         const assetMetadata: AssetMetadata = {
@@ -103,7 +103,7 @@ export default function MintPPBL2024PreprodToken() {
           ],
           description: [
             "A CIP-68 style token for participants in",
-            "Plutus Project-Based Learning 2024",
+            "Plutus Project-Based Learning 2025",
             "from Gimbalabs and Friends.",
           ],
           url: "https://plutuspbl.io",
@@ -170,10 +170,10 @@ export default function MintPPBL2024PreprodToken() {
   return (
     <div className="flex w-full flex-col">
       {connectedContribTokenUnit ? (
-        <h2>You have a PPBL 2024 Preprod Token!</h2>
+        <h2>You have a PPBL 2025 Preprod Token!</h2>
       ) : (
         <>
-          <h2>Mint Your PPBL 2024 Token</h2>
+          <h2>Mint Your PPBL 2025 Token</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
@@ -186,7 +186,7 @@ export default function MintPPBL2024PreprodToken() {
                       <Input placeholder="your alias" {...field} />
                     </FormControl>
                     <FormDescription>
-                      Your token will have the name ppbl2024-YOUR_ALIAS
+                      Your token will have the name ppbl2025-YOUR_ALIAS
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -207,7 +207,7 @@ export default function MintPPBL2024PreprodToken() {
       <Accordion type="single" collapsible>
         <AccordionItem value="faucet-1">
           <AccordionTrigger>
-            View List of PPBL 2024 Preprod Tokens
+            View List of PPBL 2025 Preprod Tokens
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">

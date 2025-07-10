@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PPBL 2024</title>
+        <title>PPBL 2025</title>
         <meta
           name="description"
-          content="Plutus Project-Based Learning 2024, from Gimbalabs & Friends"
+          content="Plutus Project-Based Learning 2025, from Gimbalabs & Friends"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -22,7 +22,7 @@ export default function Home() {
                 welcome to
               </p>
               <h1 className="my-[3rem] text-2xl font-extrabold tracking-tight md:text-[3rem]">
-                Plutus Project-Based Learning 2024
+                Plutus Project-Based Learning 2025
               </h1>
               <div className="mx-auto mt-[5rem] flex w-full flex-row justify-between md:w-3/4">
                 <Link href="https://github.com/gimbalabs/ppbl2024-front-end">
@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className="w-2/3">
           <p className="text-left font-mono text-[1.5rem]">
-            ppbl2024 $ <span className="animate-pulse">_</span>
+            ppbl2025 $ <span className="animate-pulse">_</span>
           </p>
         </div>
       </main>

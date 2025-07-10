@@ -89,14 +89,14 @@ export function MintNativeAssetWithAppWallet() {
         // 5. Set Variables
         // You can change these values:
         const assetMetadata: AssetMetadata = {
-          name: "Unsecured PPBL 2024 Token",
+          name: "Unsecured PPBL 2025 Token",
           image: "https://gimbalabs.com/g.png", // can also be IPFS address
           mediaType: "image/png",
           description:
-            "This NFT was minted with Mesh in Plutus PBL 2024 at Gimbalabs.",
+            "This NFT was minted with Mesh in Plutus PBL 2025 at Gimbalabs.",
         };
         const asset: Mint = {
-          assetName: "UnsecuredPPBL2024Token",
+          assetName: "UnsecuredPPBL2025Token",
           assetQuantity: "1",
           recipient: address,
           metadata: assetMetadata,

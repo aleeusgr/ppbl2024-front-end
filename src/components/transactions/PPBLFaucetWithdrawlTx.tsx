@@ -296,7 +296,7 @@ export default function PPBLFaucetWithdrawalTx() {
           {connectedContribTokenUnit ? (
             <>
               <h2>
-                Use a PPBL 2024 to withdraw tokens from the PPBL Faucet
+                Use a PPBL 2025 to withdraw tokens from the PPBL Faucet
                 Validator
               </h2>
               <div className="my-3 bg-primary p-3 text-primary-foreground">
@@ -310,7 +310,7 @@ export default function PPBLFaucetWithdrawalTx() {
               </Button>
             </>
           ) : (
-            <>You must mint a PPBL 2024 to interact with the PPBL Faucet Demo</>
+            <>You must mint a PPBL 2025 to interact with the PPBL Faucet Demo</>
           )}
         </>
       ) : (

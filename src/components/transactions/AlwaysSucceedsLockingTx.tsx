@@ -25,7 +25,7 @@ export default function AlwaysSucceedsLockingTx() {
           address:
             "addr_test1wqag3rt979nep9g2wtdwu8mr4gz6m4kjdpp5zp705km8wys6t2kla",
           datum: {
-            value: "hello from PPBL 2024!",
+            value: "hello from PPBL 2025!",
             inline: true,
           },
         },

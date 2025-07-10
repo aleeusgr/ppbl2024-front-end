@@ -11,8 +11,8 @@ export default function CommunityGoalsPage() {
   return (
     <main className="flex flex-col items-center justify-center">
       <div className="flex w-full flex-col items-center justify-center px-5 md:w-2/3">
-        <h1 className="my-5 text-4xl">PPBL 2024: Community Goals</h1>
-        <p className="py-1 text-xl">What are your goals for PPBL 2024?</p>
+        <h1 className="my-5 text-4xl">PPBL 2025: Community Goals</h1>
+        <p className="py-1 text-xl">What are your goals for PPBL 2025?</p>
         <p className="mb-5">
           To add yours to this page, complete{" "}
           <Link href="https://www.andamio.io/course/ppbl2024/103/lesson/2">

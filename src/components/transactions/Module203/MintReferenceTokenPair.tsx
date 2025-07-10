@@ -71,14 +71,14 @@ export default function MintReferenceTokenPair() {
         assetName: "100" + values.tokenName,
         assetQuantity: "1",
         metadata: [],
-        label: "2024",
+        label: "2025",
         recipient: referenceTokenRecipient,
       };
       const _referenceAsset: Mint = {
         assetName: "222" + values.tokenName,
         assetQuantity: "1",
         metadata: [],
-        label: "2024",
+        label: "2025",
         recipient: address,
       };
       try {

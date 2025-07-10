@@ -1,4 +1,4 @@
-# Plutus Project-Based Learning 2024
+# Plutus Project-Based Learning 2025
 From Gimbalabs & Friends
 
 This project is live at https://plutuspbl.io.

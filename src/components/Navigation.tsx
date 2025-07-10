@@ -16,12 +16,12 @@ import {
 
 const ppblRepoLinks: { title: string; href: string; description: string }[] = [
   {
-    title: "PPBL 2024 Front End",
+    title: "PPBL 2025 Front End",
     href: "https://github.com/gimbalabs/ppbl2024-front-end",
     description: "Source code for this web site",
   },
   {
-    title: "PPBL 2024 Plutus Examples",
+    title: "PPBL 2025 Plutus Examples",
     href: "https://github.com/gimbalabs/ppbl2024-plutus-examples",
     description: "Start working with Plutus TX",
   },
