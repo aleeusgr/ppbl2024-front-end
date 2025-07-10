@@ -39,11 +39,14 @@ function selectUtxoWithMostProjectTokens(inputFaucetUTxOs: UTxO[]): UTxO {
         token.unit ===
         "5e74a87d8109db21fe3d407950c161cd2df7975f0868e10682a3dbfe7070626c323032342d73636166666f6c642d746f6b656e",
     )!;
-    if (parseInt(a_tokens.quantity) > parseInt(b_tokens.quantity)) {
-      return a;
-    } else {
-      return b;
+    if(!b_tokens){
+      return a
     }
+      if (parseInt(a_tokens.quantity) > parseInt(b_tokens.quantity)) {
+        return a;
+      } else {
+        return b;
+      }
   });
 }
 
@@ -119,27 +122,32 @@ export default function PPBLFaucetWithdrawalTx() {
     api.faucet.getFaucetUTxO.useQuery();
 
   useEffect(() => {
-    if (inputFaucetUTxOs) {
-      const inputFaucetUTxO = selectUtxoWithMostProjectTokens(inputFaucetUTxOs);
-      setInputFaucetUTxO(inputFaucetUTxO);
 
-      if (
-        inputFaucetUTxO.output.amount?.[0] &&
-        inputFaucetUTxO.output.amount[1]
-      ) {
-        const updatedQuantity =
-          parseInt(inputFaucetUTxO.output.amount[1].quantity) - 1000000;
-        const _outputFaucetAssets: Asset[] = [
-          inputFaucetUTxO.output.amount[0],
-          {
-            unit: inputFaucetUTxO.output.amount[1].unit,
-            quantity: updatedQuantity.toString(),
-          },
-        ];
-        setOutputFaucetAssets(_outputFaucetAssets);
+    async function resolveUtxo(){
+      if (inputFaucetUTxOs) {
+        const inputFaucetUTxO = await selectUtxoWithMostProjectTokens(inputFaucetUTxOs)
+        
+        setInputFaucetUTxO(inputFaucetUTxO);
+
+        if (
+          inputFaucetUTxO.output.amount?.[0] &&
+          inputFaucetUTxO.output.amount[1]
+        ) {
+          const updatedQuantity =
+            parseInt(inputFaucetUTxO.output.amount[1].quantity) - 1000000;
+          const _outputFaucetAssets: Asset[] = [
+            inputFaucetUTxO.output.amount[0],
+            {
+              unit: inputFaucetUTxO.output.amount[1].unit,
+              quantity: updatedQuantity.toString(),
+            },
+          ];
+          setOutputFaucetAssets(_outputFaucetAssets);
+        }
       }
     }
-  }, [inputFaucetUTxOs]);
+    resolveUtxo()
+    }, [inputFaucetUTxOs]);
 
   useEffect(() => {
     if (address) {
@@ -288,7 +296,7 @@ export default function PPBLFaucetWithdrawalTx() {
           {connectedContribTokenUnit ? (
             <>
               <h2>
-                Use a PPBL 2024 to withdraw tokens from the PPBL Faucet
+                Use a PPBL 2025 to withdraw tokens from the PPBL Faucet
                 Validator
               </h2>
               <div className="my-3 bg-primary p-3 text-primary-foreground">
@@ -302,7 +310,7 @@ export default function PPBLFaucetWithdrawalTx() {
               </Button>
             </>
           ) : (
-            <>You must mint a PPBL 2024 to interact with the PPBL Faucet Demo</>
+            <>You must mint a PPBL 2025 to interact with the PPBL Faucet Demo</>
           )}
         </>
       ) : (

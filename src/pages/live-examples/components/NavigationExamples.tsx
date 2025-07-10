@@ -4,7 +4,7 @@ export default function NavigationExamples() {
   const examples = [
     {
       courseModule: 100,
-      title: "Getting Started with PPBL 2024",
+      title: "Getting Started with PPBL 2025",
     },
     {
       courseModule: 201,

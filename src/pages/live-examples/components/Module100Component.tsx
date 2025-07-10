@@ -14,20 +14,20 @@ export default function Module100Component() {
   return (
     <>
       <h2 className="my-5 text-2xl font-semibold">
-        Module 100: Getting Started with PPBL 2024
+        Module 100: Getting Started with PPBL 2025
       </h2>
 
       {network === 0 && (
         <>
           <Card>
             <CardHeader>
-              SLT 100.4 Demo: Mint a PPBL 2024 Preprod Token
+              SLT 100.4 Demo: Mint a PPBL 2025 Preprod Token
             </CardHeader>
             <CardContent className="w-full">
               <MintPPBL2024PreprodToken />
             </CardContent>
             <CardFooter>
-              You will use your PPBL 2024 Preprod Token in a variety of Projects
+              You will use your PPBL 2025 Preprod Token in a variety of Projects
               throughout this course.
             </CardFooter>
           </Card>
@@ -40,7 +40,7 @@ export default function Module100Component() {
             </CardContent>
             <CardFooter>
               We will use these Scaffold tokens to complete examples projects in
-              the PPBL 2024 Course.
+              the PPBL 2025 Course.
             </CardFooter>
           </Card>
         </>
