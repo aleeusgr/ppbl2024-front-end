@@ -39,14 +39,14 @@ function selectUtxoWithMostProjectTokens(inputFaucetUTxOs: UTxO[]): UTxO {
         token.unit ===
         "5e74a87d8109db21fe3d407950c161cd2df7975f0868e10682a3dbfe7070626c323032342d73636166666f6c642d746f6b656e",
     )!;
-    if(!b_tokens){
-      return a
+    if (!b_tokens) {
+      return a;
     }
-      if (parseInt(a_tokens.quantity) > parseInt(b_tokens.quantity)) {
-        return a;
-      } else {
-        return b;
-      }
+    if (parseInt(a_tokens.quantity) > parseInt(b_tokens.quantity)) {
+      return a;
+    } else {
+      return b;
+    }
   });
 }
 
@@ -122,11 +122,11 @@ export default function PPBLFaucetWithdrawalTx() {
     api.faucet.getFaucetUTxO.useQuery();
 
   useEffect(() => {
-
-    async function resolveUtxo(){
+    function resolveUtxo() {
       if (inputFaucetUTxOs) {
-        const inputFaucetUTxO = await selectUtxoWithMostProjectTokens(inputFaucetUTxOs)
-        
+        const inputFaucetUTxO =
+          selectUtxoWithMostProjectTokens(inputFaucetUTxOs);
+
         setInputFaucetUTxO(inputFaucetUTxO);
 
         if (
@@ -146,8 +146,8 @@ export default function PPBLFaucetWithdrawalTx() {
         }
       }
     }
-    resolveUtxo()
-    }, [inputFaucetUTxOs]);
+    resolveUtxo();
+  }, [inputFaucetUTxOs]);
 
   useEffect(() => {
     if (address) {
