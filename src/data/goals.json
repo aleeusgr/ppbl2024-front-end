@@ -60,8 +60,14 @@
             "goal": "Learn Mo and Grow Mo",
             "name": "Mo",
             "organization": "Green & Citrine"
-         }
+         },
 
+        {
+            "date": "2025-09-01",
+            "goal": "Practice lifelong learing, hone computational thinking skills, connect, share and innovate with others in the Cardano ecosystem.",
+            "name": "Alex/fifty",
+            "organization": "Instersect MBO"
+         }
          
     ]
 }
